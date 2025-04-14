@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty Characters</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Personajes de Rick and Morty</h1>
+    <!--filtros de los pj-->
+    <div id="filters">
+        <input type="text" id="nameFilter" placeholder="Buscar por nombre...">
+        <select id="statusFilter">
+            <option value="">Todos los estados</option>
+            <option value="Alive">Vivo</option>
+            <option value="Dead">Muerto</option>
+            <option value="unknown">Desconocido</option>
+        </select>
+        <select id="speciesFilter"></select>
+        <select id="genderFilter">
+            <option value="">Todos los géneros</option>
+            <option value="Male">Masculino</option>
+            <option value="Female">Femenino</option>
+            <option value="Genderless">Sin género</option>
+            <option value="unknown">Desconocido</option>
+        </select>        
+        <button id="applyFilters">Filtrar</button>
+    </div>
+
+    <!--paginador -->
+    <div id="navigation">
+        <button id="prevBtn" disabled>Anterior</button>
+        <button id="nextBtn">Siguiente</button>
+    </div>
+
+    <!--lista pj-->
+    <div id="characters"></div>
+
+    <!--modal de los pj-->
+    <div id="modal" class="hidden">
+        <div id="modal-content">
+            <button id="closeModal" aria-label="Cerrar modal">&times;</button>
+            <div id="modalDetails"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
